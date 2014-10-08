@@ -54,7 +54,7 @@ void Lab3::Update(float timeDelta)
 	{
 		ship2->transform->Yaw(rotation_speed*timeDelta);
 	}
-
+	// Movement of ship1
 	if (keyState[SDL_SCANCODE_U])
 	{
 		ship1->transform->position += ship1->transform->look * speed * timeDelta;
@@ -101,7 +101,7 @@ void Lab3::Update(float timeDelta)
 			Attach(lazer);
 			lazer->transform->position = ship1->transform->position;
 			lazer->transform->position += lazer->transform->look * speed * timeDelta;
-			elapsed = 0;
+			elapsed = 0.0f;
 		}
 	}
 	else
