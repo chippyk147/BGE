@@ -32,6 +32,7 @@ GameComponent::GameComponent(bool hasTransform)
 	alive = true;
 	initialised = false;
 	isRelative = false; 
+	rotation_speed = 100.0f;
 }
 
 GameComponent::~GameComponent()

@@ -58,6 +58,7 @@ namespace BGE
 		bool alive;
 		bool initialised;	
 		bool isRelative; 
+		float rotation_speed;
 
 		std::shared_ptr<Transform> transform;
 		std::shared_ptr<Transform> relativeTransform; 
