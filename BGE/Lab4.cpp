@@ -33,11 +33,11 @@ bool Lab4::Initialise()
 
 	// 500 in the constructor indicates the number of particles in the effect. 
 	// You may need to compile in release mode or reduce the number of particles to get an acceptable framerate
-	shared_ptr<FountainEffect> centFountain = make_shared<FountainEffect>(500, true);
+	shared_ptr<FountainEffect> centFountain = make_shared<FountainEffect>(5, true);
 	centFountain->transform->position.x = centFountain->transform->position.y = 0;
 	centFountain->transform->position.x = centFountain->transform->position.y = 0;
 	centFountain->transform->position.y = FOUNTAIN_HEIGHT;
-	centFountain->transform->diffuse = glm::vec3(1,1,0); // Sets the colour of the fountain
+	centFountain->transform->diffuse = glm::vec3(1,8,0); // Sets the colour of the fountain
 
 	Attach(centFountain);
 
@@ -92,5 +92,19 @@ void Lab4::Update(float timeDelta)
 
 	// Put your code here to calculate the world transform matrix for ship1
 	// You need to include the rotation bit
-	ship1->transform->world = glm::translate(glm::mat4(1), ship1->transform->position);
+
+	glm::vec3 normalV; 
+
+	normalV = glm::normalize(glm::vec3(ship2->transform->position - ship1->transform->position));
+
+	float invC = glm::dot(normalV,ship1->transform->look);
+
+	float rotation = glm::acos(invC);
+
+	if (ship2->transform->position.x > ship1->transform->position.x)
+	{
+		rotation = 2 * glm::pi<float>() - rotation;
+	}
+
+	ship1->transform->world = glm::translate(glm::mat4(1), ship1->transform->position)*glm::rotate(glm::mat4(1),glm::degrees(rotation),glm::vec3(0,1,0));
 }
