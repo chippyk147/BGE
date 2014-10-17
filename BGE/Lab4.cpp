@@ -121,6 +121,7 @@ void Lab4::Update(float timeDelta)
 	glm::vec3 toShip2 = ship2->transform->position - ship1->transform->position;
 	toShip2 = glm::normalize(toShip2);
 	theta = glm::acos(glm::dot(Transform::basisLook, toShip2));
+
 	//if (toShip2.x > 0)
 	//{
 	//	theta = - theta;
@@ -128,3 +129,4 @@ void Lab4::Update(float timeDelta)
 
 	ship1->transform->world = glm::translate(glm::mat4(1), ship1->transform->position) * glm::rotate(glm::mat4(1), glm::degrees(theta), glm::vec3(0,1,0));
 }
+
