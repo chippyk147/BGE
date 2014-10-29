@@ -1,6 +1,42 @@
 Game Engines 1 Labs
 ===================
 
+Lab 6
+-----
+In this lab we will be making quaternions!
+
+Clone/pull etc the Lab6 branch with the starter code for todays lab
+
+When you build and run the project, you will see the the Cobra Mk III  and the Ferdelance. You can control the movement of the Ferdelance using the arrow keys. You can also get the Ferdelance to go up and down using the O and L keys. To complete this lab you will need to make use of the following API calls:
+
+```C++
+glm::dot
+glm::cross
+glm::normalise
+glm::acos
+glm::degrees
+glm::axisAngle // Make a quaternion. Dont forget the angle parameter is in degrees!
+glm::mix // This slerps between two quaternions
+```
+### Part 1
+
+Generate a quaternion for the Cobra Mk III so that it always faces the Ferdelance.
+
+### Part 2
+
+Modify your code so that when you press the space key, the Cobra Mk III gradually turns to face the Ferdelance. Use the ```glm::mix``` function to achieve this. ```glm::mix``` slerps between two quaternions depending on the value of the *t* parameter. If *t* is 0, the first quaternion is returned. If *t* is 1 the second quaternion is returned. If *t* = 0.5f then a quaternion half way between the first and second quaternions is returned and so on. This is what it should look like:
+
+[![Video](http://img.youtube.com/vi/lkD9tAo9T7s/0.jpg)](http://www.youtube.com/watch?v=lkD9tAo9T7s)
+
+You can use the ```startQuaternion```, ```endQuaternion``` and slerping member variables to help achieve this. Just add the ```timeDelta``` to *t* for now.
+
+### Part 3
+Have the speed of rotation controlled by the ```turnRate``` field. This field is given in radians per second. To complete this you will have to:
+
+- Calculte the angle that the Cobra Mark III needs to rotate. Use ```glm::acos``` and ```glm::dot```
+- Calculate the time required to do this (angle / turnRate)
+- Calculate what you need to add to t based on the time required and the time delta.
+
 Lab 5
 -----
 In this lab you will be adding functionality to the Transform class and to allow jumping. This is different to the FPS behaviours we programmed on Friday in that the behaviour needs to be triggered on a key press, but happen for multiple frames. 
