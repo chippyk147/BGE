@@ -79,6 +79,24 @@ void Lab6::Update()
 	}
 
 	// Your code goes here...
+	fromQuaternion = ship1->transform->orientation;
+
+	//Normalize vector between 2 objetcs
+	glm::vec3 a = ship2->transform->position - ship1->transform->position;
+	a = glm::normalize(a);
+
+	//Normalize axis of rotation use transform of the basis look vector which is (0,0,-1)
+	glm::vec3 axis = glm::cross(Transform::basisLook, a);
+	axis = glm::normalize(axis);
+
+	//get angle of rotation using inverse cos
+	float theta = glm::acos(glm::dot(a, Transform::basisLook));
+
+	//set toQuaternion to degrees of rotation and the axis of rotation
+	toQuaternion = glm::angleAxis(glm::degrees(theta), axis);
+
+	//set ship1 to be pointing in the direction of the toQuaternion
+	ship1->transform->orientation = toQuaternion;
 
 	Game::Update();
 
