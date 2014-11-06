@@ -12,11 +12,12 @@ Rigid Bodies and Joints:
 
 Rigid bodies needed are:
 
--1 for each of the fish's flippers.
--A chain of rigid bodies that act together to form the spine.
--1 rigid body for the fish's tail.
--2 rigid bodies to form the fish's skull, lower and upper parts of jaw.
+-1 for each of the fish's flippers
+
+-A chain of rigid bodies that act together to form the spine
+
+-1 rigid body for the fish's tail
+
+-2 rigid bodies to form the fish's skull, lower and upper parts of jaw
 
 Joint types needed are:
-
--
