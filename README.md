@@ -21,3 +21,9 @@ Rigid bodies needed are:
 -2 rigid bodies to form the fish's skull, lower and upper parts of jaw
 
 Joint types needed are:
+
+Diagrams of Fish
+
+![]IMG_0198.jpg
+![]IMG_0199.jpg
+![]IMG_0200.jpg
