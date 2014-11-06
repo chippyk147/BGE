@@ -16,3 +16,7 @@ Rigid bodies needed are:
 -A chain of rigid bodies that act together to form the spine.
 -1 rigid body for the fish's tail.
 -2 rigid bodies to form the fish's skull, lower and upper parts of jaw.
+
+Joint types needed are:
+
+-
