@@ -24,6 +24,6 @@ Joint types needed are:
 
 Diagrams of Fish
 
-![](IMG_0198.jpg)
-![](IMG_0199.jpg)
-![](IMG_0200.jpg)
+![](IMG_0198.JPG)
+![](IMG_0199.JPG)
+![](IMG_0200.JPG)
