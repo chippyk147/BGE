@@ -31,3 +31,15 @@ To build:
 * Download the dependencies from here: http://1drv.ms/1olPefQ
 * Unzip to the folder Dependencies in your project 
 * Use the included Visual Studio 2013 project files
+
+Name: John Kiernan
+Student Number: C11343056
+
+I plan to make an animat of a fish while it is swimming. The animat will be able to move like a fish
+and also be able to move its flippers and mouth.
+
+![](http://www.biology-resources.com/images/fish-swimming-big.jpg)
+
+Rigid Bodies and Joints:
+
+
