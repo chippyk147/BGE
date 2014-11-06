@@ -22,6 +22,10 @@ Rigid bodies needed are:
 
 Joint types needed are:
 
+-Some hinge joints or condyloid joints for spinal movement and mouth movement
+-To move the head and tail I would need a Condyloid joint to make it move from side to side
+-Some ball and socket joints for the fins
+
 Diagrams of Fish
 
 ![](IMG_0198.JPG)
