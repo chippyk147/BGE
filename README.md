@@ -28,6 +28,10 @@ Joint types needed are:
 
 -Some ball and socket joints for the fins
 
+The power source for the fish would be the provided by the movement of his tail.
+When a force moves the tail it will cause the spine of the fish to wriggle and move in
+fish or snake like motion.
+
 Diagrams of Fish
 
 ![](IMG_0198.JPG)
