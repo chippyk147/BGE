@@ -84,11 +84,10 @@ bool PhysicsGame1::Initialise()
 	physicsFactory->CreateVehicle(glm::vec3(5, 5, 10));
 
 
-	if (!Game::Initialise()) {
+	if (!Game::Initialise()) 
+	{
 		return false;
 	}
-
-
 	
 	return true;
 }
